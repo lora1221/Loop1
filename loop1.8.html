@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guessing a number</title>
+</head>
+<body>
+<button type="button" id="btn" onclick="guessing()" style="color:Tomato; background: #41991c; width: 100px; height:50px">Play</button>
+<script>
+    function guessing() {
+        var rangeFrom = parseInt(prompt("Enter the range of number you wanna guess. From: ",''));
+        var rangeTo = parseInt(prompt("To ",''));
+        var randomNumb = Math.floor((Math.random() * rangeTo) + rangeFrom);
+        var guessing = parseInt(prompt("What is your guessing number? ",''));
+        var found = false;
+        while (!found) {
+            if (guessing == randomNumb) {
+                found = true;
+                alert("CONGRATULATION! You are right!");
+            } else {
+                if (guessing < randomNumb) {
+                    alert("The number you guessed is SMALLER than the random number.");
+                } else {
+                    alert("The number you guess is BIGGER than the random number.");
+                }
+                guessing = parseInt(prompt("What is your guessing number? ",''));
+            }
+        }
+    }
+</script>
+</body>
+</html>

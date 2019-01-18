@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fibonacci % 5</title>
+</head>
+<body>
+<script>
+    var i = 0;
+    var j = 1;
+    found = false;
+    var a;
+    while (!found) {
+        if (i % 5 == 0) {
+            found = true;
+            document.write("So dau tien trong day fibonacci chia het cho 5 la: " + i);
+        }
+        a = i + j;
+        i = j;
+        j = a;
+    }
+</script>
+</body>
+</html>
